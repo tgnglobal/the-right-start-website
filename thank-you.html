@@ -100,6 +100,7 @@
   /* SUPPORT */
   .support{padding:40px 0 16px;}
   .support-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .support-grid-single{grid-template-columns:1fr;max-width:320px;margin:0 auto;}
   .support-card{
     background:var(--white);border-radius:var(--radius);padding:22px 20px;
     box-shadow:var(--shadow);text-align:center;
@@ -175,13 +176,7 @@
 <section class="support">
   <div class="wrap">
     <div class="section-label reveal"><span class="eyebrow">Stay Connected</span><h2>Get support & join the community</h2></div>
-    <div class="support-grid">
-      <div class="support-card reveal">
-        <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
-        <h4>WhatsApp Support</h4>
-        <p>Questions about the guide? Message us directly.</p>
-        <a href="https://wa.me/2347039998885" target="_blank" rel="noopener" class="btn-outline">Chat on WhatsApp</a>
-      </div>
+    <div class="support-grid support-grid-single">
       <div class="support-card reveal">
         <div class="dl-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
         <h4>Telegram Community</h4>
@@ -206,12 +201,14 @@
 
 <footer>
   <div class="wrap">
-    &copy; 2025 Charles Duru. All rights reserved.
-    <span>The Right Start</span>
+    <span id="copyright-line">&copy; 2026 The Right Start. All rights reserved.</span>
   </div>
 </footer>
 
 <script>
+  document.getElementById('copyright-line').innerHTML =
+    '&copy; ' + new Date().getFullYear() + ' The Right Start. All rights reserved.';
+
   const revealEls = document.querySelectorAll('.reveal:not(.in)');
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });

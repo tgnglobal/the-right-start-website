@@ -151,7 +151,7 @@
     max-width:480px;
     margin-bottom:34px;
   }
-  .hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .hero-cta-row{display:flex;gap:14px;flex-wrap:nowrap;align-items:center;justify-content:center;}
   .hero-note{font-size:13px;color:rgba(247,241,232,0.55);margin-top:14px;}
   .hero-visual{
     position:relative;
@@ -235,7 +235,8 @@
   .solution h2{color:var(--cream-2);font-size:clamp(28px,4vw,42px);max-width:680px;margin:14px auto 20px;}
   .solution p{max-width:520px;margin:0 auto 36px;color:rgba(247,241,232,0.8);font-size:17px;}
   .cover-mock{
-    width:230px;
+    width:100%;
+    max-width:380px;
     margin:0 auto;
   }
   .cover-mock img{width:100%;height:auto;display:block;filter:drop-shadow(0 30px 50px rgba(0,0,0,0.45));}
@@ -297,7 +298,7 @@
     border-radius:var(--radius);
     overflow:hidden;
   }
-  .bonus-cover{width:100%;padding:24px 24px 0;object-fit:contain;display:block;}
+  .bonus-cover{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;display:block;}
   .bonus-card-body{padding:18px 22px 26px;}
   .bonus-tag{
     display:inline-block;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;
@@ -332,8 +333,8 @@
   .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .test-card{background:var(--white);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);}
   .test-avatar{
-    width:42px;height:42px;border-radius:50%;background:var(--sage);color:var(--cream);
-    display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;margin-bottom:16px;
+    width:64px;height:64px;border-radius:50%;background:var(--sage);color:var(--cream);
+    display:flex;align-items:center;justify-content:center;font-weight:600;font-size:19px;margin-bottom:16px;
   }
   .test-card p.quote{font-size:14.5px;color:var(--ink-soft);margin-bottom:16px;font-style:italic;}
   .test-name{font-size:12.5px;color:var(--ink-soft);font-weight:600;}
@@ -382,7 +383,7 @@
   .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
   .footer-links a{font-size:13.5px;color:rgba(247,241,232,0.65);transition:color .2s;}
   .footer-links a:hover{color:var(--rose-light);}
-  .footer-bottom{border-top:1px solid rgba(247,241,232,0.1);padding-top:24px;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  .footer-bottom{border-top:1px solid rgba(247,241,232,0.1);padding-top:24px;font-size:12.5px;display:flex;justify-content:center;text-align:center;}
 
   /* ================= RESPONSIVE ================= */
   @media (max-width:860px){
@@ -398,6 +399,8 @@
     .hero{padding:44px 0 64px;}
     section{padding-top:64px;padding-bottom:64px;}
     .price-card{padding:32px 22px;}
+    .hero-cta-row{gap:8px;}
+    .hero-cta-row .btn{padding:13px 14px;font-size:13.5px;flex:1;}
   }
 </style>
 </head>
@@ -407,11 +410,7 @@
 <section class="hero">
   <div class="wrap">
     <div class="byline">
-      <span>By Charles Duru</span>
-      <span class="dot"></span>
-      <span>Published 25 August, 2025</span>
-      <span class="dot"></span>
-      <span>7 min read</span>
+      <span>Published by Charles Duru on 25 August, 2026</span>
     </div>
     <div class="hero-grid">
       <div class="reveal in">
@@ -624,7 +623,7 @@
 </section>
 
 <!-- ================= FAQ ================= -->
-<section class="faq">
+<section class="faq" id="faq">
   <div class="wrap" style="max-width:760px;">
     <div class="section-head reveal">
       <span class="eyebrow">Questions</span>
@@ -670,20 +669,17 @@
       <div class="test-card reveal">
         <div class="test-avatar">B.A.</div>
         <p class="quote">"I wish I had this before I bought three different packs my baby refused. Straight to the point."</p>
-        <div class="test-name">B.A., Lagos</div>
-        <div class="test-flag">Placeholder review</div>
+        <div class="test-name">B.A., Lagos &middot; placeholder</div>
       </div>
       <div class="test-card reveal">
         <div class="test-avatar">F.O.</div>
         <p class="quote">"Finally something written for us and our brands, not a foreign guide that doesn't apply here."</p>
-        <div class="test-name">F.O., Abuja</div>
-        <div class="test-flag">Placeholder review</div>
+        <div class="test-name">F.O., Abuja &middot; placeholder</div>
       </div>
       <div class="test-card reveal">
         <div class="test-avatar">C.N.</div>
         <p class="quote">"The comparison chart alone saved me money on my next shopping trip."</p>
-        <div class="test-name">C.N., Port Harcourt</div>
-        <div class="test-flag">Placeholder review</div>
+        <div class="test-name">C.N., Port Harcourt &middot; placeholder</div>
       </div>
     </div>
   </div>
@@ -729,20 +725,22 @@
     <div class="footer-grid">
       <div class="footer-brand">The Right Start</div>
       <div class="footer-links">
-        <a href="https://wa.me/2347039998885" target="_blank" rel="noopener">WhatsApp Support</a>
         <a href="https://t.me/TheRightStartMums" target="_blank" rel="noopener">Telegram Community</a>
         <a href="#pricing">Get The Guide</a>
         <a href="#faq">FAQ</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2025 Charles Duru. All rights reserved.</span>
-      <span>Made for Nigerian families</span>
+      <span id="copyright-line">&copy; 2026 The Right Start. All rights reserved.</span>
     </div>
   </div>
 </footer>
 
 <script>
+  // Dynamic copyright year
+  document.getElementById('copyright-line').innerHTML =
+    '&copy; ' + new Date().getFullYear() + ' The Right Start. All rights reserved.';
+
   // Scroll reveal
   const revealEls = document.querySelectorAll('.reveal:not(.in), .reveal-left, .reveal-right');
   const io = new IntersectionObserver((entries)=>{
