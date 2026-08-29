@@ -151,7 +151,7 @@
     max-width:480px;
     margin-bottom:34px;
   }
-  .hero-cta-row{display:flex;gap:14px;flex-wrap:nowrap;align-items:center;justify-content:center;}
+  .hero-cta-row{display:flex;gap:14px;flex-wrap:nowrap;align-items:center;justify-content:flex-start;}
   .hero-note{font-size:13px;color:rgba(247,241,232,0.55);margin-top:14px;}
   .hero-visual{
     position:relative;
@@ -332,8 +332,10 @@
   .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .test-card{background:var(--white);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);}
   .test-avatar{
-    width:64px;height:64px;border-radius:50%;background:var(--sage);color:var(--cream);
-    display:flex;align-items:center;justify-content:center;font-weight:600;font-size:19px;margin-bottom:16px;
+    width:64px;height:64px;border-radius:50%;
+    background-size:cover;background-position:center;
+    margin-bottom:16px;
+    border:2px solid var(--honey);
   }
   .test-card p.quote{font-size:14.5px;color:var(--ink-soft);margin-bottom:16px;font-style:italic;}
   .test-name{font-size:12.5px;color:var(--ink-soft);font-weight:600;}
@@ -398,7 +400,7 @@
     .hero{padding:44px 0 64px;}
     section{padding-top:64px;padding-bottom:64px;}
     .price-card{padding:32px 22px;}
-    .hero-cta-row{gap:8px;}
+    .hero-cta-row{gap:8px;justify-content:center;}
     .hero-cta-row .btn{padding:13px 14px;font-size:13.5px;flex:1;}
   }
 </style>
@@ -662,23 +664,23 @@
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">What Readers Say</span>
-      <h2>Placeholder testimonials</h2>
+      <h2>Real feedback from readers</h2>
     </div>
     <div class="test-grid">
       <div class="test-card reveal">
-        <div class="test-avatar">B.A.</div>
-        <p class="quote">"I wish I had this before I bought three different packs my baby refused. Straight to the point."</p>
-        <div class="test-name">B.A., Lagos &middot; placeholder</div>
+        <img class="test-avatar" src="test-ba.jpg" alt="B.A." loading="lazy">
+        <p class="quote">"Wow, I'm not a mum yet, but I find this book so helpful. Thanks for sharing the knowledge!"</p>
+        <div class="test-name">B.A.</div>
       </div>
       <div class="test-card reveal">
-        <div class="test-avatar">F.O.</div>
-        <p class="quote">"Finally something written for us and our brands, not a foreign guide that doesn't apply here."</p>
-        <div class="test-name">F.O., Abuja &middot; placeholder</div>
+        <img class="test-avatar" src="test-fo.jpg" alt="F.O." loading="lazy">
+        <p class="quote">"My baby is 15 months and doesn't like family food yet. Already on Cerelac (wheat and milk) and pap (corn, guinea corn, and millet), garnished with NAN 3. Thanks for the book!"</p>
+        <div class="test-name">F.O.</div>
       </div>
       <div class="test-card reveal">
-        <div class="test-avatar">C.N.</div>
-        <p class="quote">"The comparison chart alone saved me money on my next shopping trip."</p>
-        <div class="test-name">C.N., Port Harcourt &middot; placeholder</div>
+        <img class="test-avatar" src="test-cn.jpg" alt="C.N." loading="lazy">
+        <p class="quote">"I love Nutribom so much, it makes my baby chubby. The comparison in this book helped a lot, thanks."</p>
+        <div class="test-name">C.N.</div>
       </div>
     </div>
   </div>
@@ -695,7 +697,7 @@
       <p class="price-sub">Ebook + 2 bonus PDFs</p>
       <div class="price-tag">
         <span class="price-now">&#8358;2,500</span>
-        <span class="price-was">&#8358;3,500</span>
+        <span class="price-was">&#8358;7,500</span>
       </div>
       <div class="price-badge">Launch price, first two weeks only</div>
       <ul class="price-list">
@@ -704,8 +706,8 @@
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Your First 30 Days of Solids Planner (PDF)</li>
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 7-day money-back guarantee</li>
       </ul>
-      <a href="https://selar.com/the-right-start-mums" class="btn btn-primary btn-block">Get The Guide on Selar &rarr;</a>
-      <p class="price-note">Secure checkout via Selar &middot; Instant download after payment</p>
+      <a href="https://selar.com/the-right-start-mums" class="btn btn-primary btn-block">Get Access Now &rarr;</a>
+      <p class="price-note">Secure checkout &middot; Instant download after payment</p>
     </div>
   </div>
 </section>
