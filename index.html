@@ -404,6 +404,23 @@
     .hero-cta-row .btn{padding:13px 14px;font-size:13.5px;flex:1;}
   }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1206589034641617');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1206589034641617&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -706,7 +723,7 @@
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Your First 30 Days of Solids Planner (PDF)</li>
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 7-day money-back guarantee</li>
       </ul>
-      <a href="https://selar.com/the-right-start-mums" class="btn btn-primary btn-block">Get Access Now &rarr;</a>
+      <a href="https://selar.com/the-right-start-mums" class="btn btn-primary btn-block" onclick="if(typeof fbq==='function'){fbq('track','Lead');}">Get Access Now &rarr;</a>
       <p class="price-note">Secure checkout &middot; Instant download after payment</p>
     </div>
   </div>
